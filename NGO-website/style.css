@@ -1,0 +1,304 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f7f7f7;
+}
+/*
+colors: darkblue: #1a2238 
+lightblue: #9daaf2 
+orenge: #ff6a3d  
+yellow: #f4db7d 
+*/
+html{
+    font-size: 65.5%; /* for responsive font */
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    background-color: #1a2238;
+    padding: 2rem 9%;
+}
+header .logo{
+    font-size: 3rem;
+    color: #ff6a3d;
+    font-weight: bold;
+    margin-left: 20px;
+}
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+header .navbar a:hover{
+    color: #f4db7d;
+}
+#menu{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    display: none;
+}
+section{
+    padding: 2rem 9%;
+}
+
+/* Home section style */
+.home-section{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(/images/kids4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home-section .home-content{
+    max-width: 50rem;
+}
+.home-section .home-content h1{
+    font-size: 5rem;
+    color: #f4f4f4;
+}
+.home-section .home-content span{
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ff6a3d;
+    padding: 1rem 0;
+}
+.home-section .home-content p{
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.btn{
+    display: inline-block;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 1rem 3.5rem;
+    background-color: #ff6a3d;
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+    border-radius: 5rem;
+}
+.btn:hover{
+    background-color: #ed5628;
+}
+
+/* About us sction*/
+.about-us{
+    padding: 1.2rem 9%;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 10px;
+}
+.about-us h1{
+    font-size: 4rem;
+    color: #ed5628;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 2rem 0;
+}
+.about-us h1 span{
+    color: #9daaf2;
+}
+.about-us p{
+    font-size: 1.7rem;
+}
+.about-us h2{
+    font-size: 2rem;
+    color: #ed5628;
+    padding: .9rem 0;
+}
+.about-us h2 span{
+    color: #9daaf2;
+}
+.about-us ul li{
+    font-size: 1.5rem;
+    padding: 1.2rem 0;
+    margin: 0 6rem;
+}
+
+/* Volunteers section */
+.volunteer-section{
+    background-color: #f7f7f7;
+    padding: 4rem;
+}
+.form-container{
+    max-width: 70vw;
+    background-color: white;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.4);
+}
+.form-container h2{
+    font-size: 3rem;
+    text-align: center;
+    color: #1a2238;
+}
+.form-container p{
+    text-align: center;
+    margin: 1rem 0;
+    color: #364671;
+    font-size: 1.4rem;
+}
+.form-group{
+    margin-bottom: 1.5rem;
+}
+.form-group label{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: .5rem;
+}
+.form-group input, 
+.form-group select, 
+.form-group textarea{
+    width: 100%;
+    padding: .8rem;
+    border: 1px solid #333;
+    font-size: 1.4rem;
+    border-radius: 6px;
+}
+.volunteer-btn {
+    display: block;
+    margin: 0 auto; /* Center the button */
+    padding: .9rem;
+    background-color: #ff6a3d;
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+}
+
+.volunteer-btn:hover { 
+    background-color: #e65a2c;
+}
+
+.nav-link.active {
+  color: #f4db7d;
+  border-bottom: 2px solid #f4db7d;
+}
+
+/* Media Queries */
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+    .home-section{
+        background-position: left;
+    }
+}
+@media (max-width: 768px){
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem 2rem;
+    }
+
+    #menu {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 2.5rem;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a2238;
+        padding: 1rem 2rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    header .navbar a {
+        margin: 1rem;
+        padding: 1.2rem 2rem;
+        font-size: 2rem;
+        background-color: #364671;
+        display: block;
+    }
+    .home-section .home-content h1{
+        font-size: 4rem;
+    }
+    .home-section .home-content span{
+        font-size: 2rem;
+    }
+    .home-section .home-content p{
+        font-size: 1.5rem;
+    }
+    .btn{
+        font-size: 1.5rem;
+    }
+    .about-us h1{
+        font-size: 3rem;
+    }
+    .about-us h2{
+        font-size: 1.5rem;
+    }
+    .about-us p{
+        font-size: 1.2rem;
+    }
+    .about-us ul li{
+        font-size: 1.2rem;
+        padding: 1rem 0;
+        margin: 0 3rem;
+    }
+    .form-container h2{
+        font-size: 2rem;
+    }
+    .form-container {
+        padding: 2.5rem;
+    }
+    .form-group label{
+        font-size: 1.3rem;
+    }
+    .volunteer-btn {
+        font-size: 1rem;
+    }
+
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}

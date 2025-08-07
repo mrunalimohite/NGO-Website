@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NGO Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- header section -->
+    <header>
+        <i class="fa-solid fa-bars" id="menu"></i>
+        <div class="logo">
+                <span>NGO</span>
+            </div>
+        <nav class="navbar" id="navList">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About Us</a>
+            <a href="#volunteer" class="nav-link">Volunteer</a>
+        </nav>
+    </header>
+    <!-- Home section-->
+    <section class="home-section" id="home">
+        <div class="home-content">
+            <h1>Welcome to Our NGO</h1>
+            <span>Helping Hands, Healing Hearts</span>
+            <p>We believe every child deserves a safe and bright future. Join us in making a difference by supporting education, health, and hope.</p>
+            <a href="#" class="btn">Join Us</a>
+        </div>
+    </section>
+     <!-- About us section content-->
+    <section class="about-us" id="about">
+        <h1>About <span>Us</span></h1>
+        <p>We are a non-governmental organization (NGO) dedicated to making a positive difference in the lives of underprivileged communities.</p>
+
+        <h2><span>Our</span> Mission</h2>
+        <p>To empower individuals through education, health care, and community development, ensuring a brighter future for all.</p>
+        <h2><span>Our</span>  Vision</h2>
+        <p>A world where every person has equal access to opportunities, resources, and a dignified life.</p>
+
+        <h2><span>Our</span> Story</h2>
+        <p>Founded in 2020 by a group of passionate volunteers, our NGO began as a small initiative to distribute food and basic supplies during the pandemic. Over time, we expanded into education programs, women empowerment workshops, and health camps.</p>
+
+        <h2>What<span> We Do</span></h2>
+        <ul>
+            <li>Organize free educational programs and tutoring for children</li>
+            <li>Run skill development workshops for women and youth</li>
+            <li>Conduct health check-up and awareness camps</li>
+            <li>Distribute food, clothes, and essentials to families in need</li>
+        </ul>
+        <h2>Join <span>Us</span></h2>
+        <p>We welcome volunteers, donors, and partners to join our mission. Together, we can create a better tomorrow.</p>
+    </section>
+    <section class="volunteer-section" id="volunteer">
+        <div class="form-container">
+            <h2>Become a Volunteer</h2>
+            <p>Fill out the form below and join us in making a difference!</p>
+
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="fullname">Full Name*</label>
+                    <input type="text" id="fullname" name="fullname" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address*</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+                <div class="form-group">
+                    <label for="age">Age*</label>
+                    <input type="number" id="age" name="age" min="16" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="interest">Area of Interest</label>
+                    <select id="interest" name="interest">
+                        <option value="education">Education Support</option>
+                        <option value="health">Healthcare Assistance</option>
+                        <option value="fundraising">Fundraising</option>
+                        <option value="events">Event Management</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why do you want to volunteer?</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us briefly..."></textarea>
+                </div>
+                <button type="submit" class="volunteer-btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
